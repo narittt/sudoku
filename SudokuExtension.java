@@ -40,43 +40,6 @@ public class SudokuExtension {
         display = new LandscapeDisplay(board, 30);
     }
 
-    // public Cell findBestCell(){
-    //     //algorithm to find the cell with least amount of valid values able to be inputed
-    //     int lowestValid = 10;
-    //     int lowRow = 0;
-    //     int lowCol = 0; 
-    //     for (int i = 0; i<Board.size; i++){ 
-    //         for (int j = 0; j<Board.size; j++){
-    //             int currentValids = 0;
-    //             for(int k = 1; k<10; k++){
-    //                 boolean valid = board.validValue(i, j, k); 
-    //                 if (valid){
-    //                     // System.out.println("valid " + i + ", " + j +  ", " + k);
-    //                     currentValids++; 
-    //                 }
-    //                 else{
-    //                     return null; 
-    //                 }
-    //             }
-    //             if (currentValids < lowestValid){
-    //                 lowRow = i;
-    //                 lowCol = j;
-    //                 lowestValid = currentValids; 
-    //                 System.out.println(lowRow + "," + lowCol + "Found lowest: " + lowestValid);
-    //             }
-    //             if (lowestValid == 0){
-    //                 return null; 
-    //             }
-    //         }
-    //     }
-        
-        
-    //     System.out.println("best cell row " + lowRow + ", col " + lowCol); 
-    //     Cell result = board.get(lowRow, lowCol);
-    //     return result; 
-        
-    // }
-
     public Cell findBestCell(){
         //algorithm to find the cell with the least valid values
         int lowRow = 0;
@@ -109,25 +72,6 @@ public class SudokuExtension {
         //return least valid values
         return (board.get(lowRow, lowCol));
     }
-
-    // public Cell findBestCell(){
-    //     //algorithm to find the first cell with a 0 value
-    //     for(int i = 0; i < 9; i++){
-    //         for(int j = 0; j<9; j++){
-    //             Cell current = board.get(i,j); 
-    //             if (current.getValue() == 0){
-    //                 for (int k = 1; k<10; k++){
-    //                     if(board.validValue(i, j, k)){
-    //                         return current; 
-    //                     }
-                        
-    //                 }
-    //                 return null; 
-    //             }
-    //         }
-    //     }
-    //     return null; 
-    // }
 
     public boolean solve(int delay){
         //algorithm to use findBestCell and fill out sudoku board
@@ -225,19 +169,5 @@ public class SudokuExtension {
         boolean result1 = test.solve(100);
         System.out.println(test.toString());
         System.out.println(result1);
-
-        // test.board.read("board1.txt"); 
-        // boolean result = test.board.read("board1.txt");
-        // System.out.println(test.toString());
-        // if (!result) {
-        //     System.out.println("Failure to load test2.txt");
-        // } else {
-        //     System.out.println("Trying!");
-        //     boolean results = test.solve(30); 
-        //     System.out.println("Solved!");
-        //     System.out.println(test.toString());
-        //     System.out.println(results);
-        // }
-
     }
 }
