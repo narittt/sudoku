@@ -1,5 +1,5 @@
-# sudoku
-Game built using Java that implements an algorithm to solve a 9x9 sudoku board with a visual representation. 
+# Sudoku
+Game built for my CS231 Data Structure and Algorithms class using Java that implements an algorithm to solve a 9x9 sudoku board with a visual representation.
 
 # view it in action! 
 
